@@ -1,0 +1,10 @@
+<script>
+
+safari.application.addEventListener("command", performCommand, false);
+ 
+function performCommand(event) {
+	if (event.command != "pwords") return;
+	safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("insertpass", 0);
+}
+
+</script>
